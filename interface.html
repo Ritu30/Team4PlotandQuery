@@ -42,7 +42,7 @@ function checkFile(e) {
             alert(txt);
         }
     }
-	///using ajax for retriveing the json data
+	///using ajax for posting the json data
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -50,7 +50,7 @@ function checkFile(e) {
 			document.getElementById("demo").innerHTML = myObj.name;
 			}
 		};
-	xmlhttp.open("POST", "/Location_History.json/", true);
+	xmlhttp.open("POST", "/localhost:64436/parsejson", true);
 	xmlhttp.send();
 	
 }
