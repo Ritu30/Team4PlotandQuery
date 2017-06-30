@@ -14,11 +14,12 @@
 <p>Click the button to create a File Upload Button.</p>
 
 
-<input type="file" name="file" id="confirm">
+<input type="file" name="file" id="myfile">
+<button type="button" onclick="myFunction()">Get path</button>
 <!--<input type="file" name="file" id="approveletter">-->
 <script>
-document.getElementById('confirm').addEventListener('change', checkFile, false);
-approveletter.addEventListener('change', checkFile, false);
+document.getElementById('myfile').addEventListener('change', checkFile, false);
+//approveletter.addEventListener('change', checkFile, false);
 
 function checkFile(e) {
 
@@ -38,7 +39,11 @@ function checkFile(e) {
         }
     }
 }
-
+function myFunction() {
+    var x = document.getElementById("myfile").value;
+    //document.getElementById("demo").innerHTML = x;
+	alert(x);
+}
 </script>
 
 <!--<script>
